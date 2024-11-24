@@ -1,0 +1,7 @@
+{
+  "name": "AppGestores",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
