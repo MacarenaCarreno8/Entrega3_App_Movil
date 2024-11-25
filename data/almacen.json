@@ -1,0 +1,283 @@
+{
+    "estudiantes": [
+      {
+        "id": "1",
+        "run": "20553366-4",
+        "password": "jorge1234",
+        "nombre": "Jorge",
+        "apellido": "Lorca",
+        "fono": "+56947113825",
+        "email": "j.lorca@duocuc.cl",
+        "isactive": true,
+        "imageUrl": "assets/Kakashi Hatake.jpg",
+        "eventosRegistrados": []
+      },
+      {
+        "id": "2",
+        "run": "22026952-3",
+        "password": "bruno1234",
+        "nombre": "Bruno",
+        "apellido": "Lorca",
+        "fono": "+56922349871",
+        "email": "b.lorca@duocuc.cl",
+        "isactive": true,
+        "imageUrl": "assets/User.jpg",
+        "eventosRegistrados": []
+      },
+      {
+        "id": "3",
+        "run": "21068827-7",
+        "password": "gabriel1234",
+        "nombre": "Gabriel",
+        "apellido": "Lorca",
+        "fono": "+56999884422",
+        "email": "g.lorca@duocuc.cl",
+        "isactive": true,
+        "imageUrl": "assets/User.jpg",
+        "eventosRegistrados": []
+      },
+      {
+        "id": "4",
+        "run": "10653475-6",
+        "password": "julia1234",
+        "nombre": "Julia",
+        "apellido": "Villanueva",
+        "fono": "+56986873718",
+        "email": "j.villanueva@gmail.cl",
+        "isactive": true,
+        "imageUrl": "assets/User.jpg",
+        "eventosRegistrados": []
+      },
+      {
+        "id": "5",
+        "run": "11362738-7",
+        "password": "jorge1234",
+        "nombre": "Jorge",
+        "apellido": "Lorca",
+        "fono": "+56973769733",
+        "email": "j.lorcad@mail.cl",
+        "isactive": true,
+        "imageUrl": "assets/User.jpg",
+        "eventosRegistrados": []
+      },
+      {
+        "id": "1fcb",
+        "run": "12345678-9",
+        "password": "duoc1234",
+        "nombre": "Julian",
+        "apellido": "Vasquez",
+        "fono": "+56911223344",
+        "email": "j.vasquez@gmail.com",
+        "isactive": true,
+        "imageUrl": "assets/User.jpg",
+        "eventosRegistrados": []
+      },
+      {
+        "id": "19c7",
+        "run": "20553366-3",
+        "password": "duoc1234",
+        "nombre": "abc",
+        "apellido": "def",
+        "fono": "+56947113825",
+        "email": "j.lorca@duocuc.com",
+        "isactive": true,
+        "imageUrl": "assets/User.jpg",
+        "eventosRegistrados": []
+      },
+      {
+        "id": "1826",
+        "run": "11111111-1",
+        "password": "duoc1234",
+        "nombre": "asd",
+        "apellido": "asd",
+        "fono": "+56911111111",
+        "email": "a@a.com",
+        "isactive": true,
+        "imageUrl": "assets/User.jpg",
+        "eventosRegistrados": []
+      },
+      {
+        "id": "33f6",
+        "run": "12345678-k",
+        "password": "duoc1234",
+        "nombre": "Juan",
+        "apellido": "Caballo",
+        "fono": "+56911223344",
+        "email": "b@b.com",
+        "isactive": true,
+        "imageUrl": "assets/User.jpg"
+      }
+    ],
+    "gestores": [
+      {
+        "id": "1",
+        "run": "9999999-9",
+        "password": "duoc1234",
+        "nombre": "Viviana",
+        "apellido": "Poblete",
+        "fono": "+56911223344",
+        "email": "v.poblete@profesor.duoc.cl",
+        "isactive": true,
+        "imageUrl": "assets/User.jpg"
+      },
+      {
+        "id": "2",
+        "run": "8888888-8",
+        "password": "duoc1234",
+        "nombre": "Alex",
+        "apellido": "Aguilera",
+        "fono": "+56955667788",
+        "email": "a.aguilera@profesor.duoc.cl",
+        "isactive": true,
+        "imageUrl": "assets/User.jpg"
+      },
+      {
+        "id": "3",
+        "run": "1111111-1",
+        "password": "duoc1234",
+        "nombre": "test",
+        "apellido": "test",
+        "fono": "+56911112222",
+        "email": "b@b.cl",
+        "isactive": true,
+        "imageUrl": "assets/User.jpg"
+      }
+    ],
+    "eventos": [
+      {
+        "id": "2",
+        "titulo": "¿Qué es el cambio climático?",
+        "descripcion": "¿Comó afecta a los seres vivos?.",
+        "fecha": "Viernes 5 de Enero. 12:00 hrs.",
+        "lugar": "Transmisión en vivo por Youtube.",
+        "imagen": "assets/CambioClimatico.jpg",
+        "comentario": [
+          {
+            "usuario": "Jorge ",
+            "comentario": "Excelente transmisión. Me sumo para la próxima!"
+          },
+          {
+            "usuario": "Nicolas",
+            "comentario": "Me parece un excelente taller, hace falta que la gente tome más consciencia!"
+          },
+          {
+            "usuario": "asd",
+            "comentario": "No alcancé asistir :( para la próxima deberían publicarlo por insta."
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "titulo": "SII: Obligaciones Tributarias",
+        "descripcion": "Durante esta actividad, podrás resolver tus dudas, respecto a los puntos que se estarán abordando en vivo.",
+        "fecha": "Lunes 13 de Junio. 15:00 hrs.",
+        "lugar": "Transmisión en vivo por Youtube.",
+        "imagen": "assets/FormalizacionSII.png",
+        "comentario": [
+          {
+            "usuario": "Nicolas",
+            "comentario": "Alguien de administracion que vaya?? para no ir solo :("
+          },
+          {
+            "usuario": "Jorge Lorca",
+            "comentario": "Siempre es importante informarse! me fue bastante útil."
+          },
+          {
+            "usuario": "asd",
+            "comentario": "Llegué tarde y no me dejaron entrar a pesar de tener mi Qr de ingreso. Para no volver!"
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "titulo": "Mapuches: Historia y Cultura",
+        "descripcion": "En un país que cada día es más consciente de sus pueblos originarios, Duoc UC, sede Alameda ha realizado un  ciclo de concientización Mapuche, con dos capítulos uno enfocado en la cultura y otro en la historia.",
+        "fecha": "Martes 12 de Octubre. 19:00 hrs.",
+        "lugar": "Transmisión en vivo por Youtube y Duoc Sede Alameda.",
+        "imagen": "assets/Mapuches.jpg",
+        "comentario": [
+          {
+            "usuario": "Nicolas",
+            "comentario": "Muy bueno. Deberían dar más talleres así"
+          },
+          {
+            "usuario": "Jorge Lorca",
+            "comentario": "Excelente iniciativa"
+          }
+        ]
+      },
+      {
+        "id": "7627",
+        "titulo": "Taller de Robótica",
+        "descripcion": "El taller de robótica enseñará a los participantes a construir y programar robots básicos, fomentando habilidades en tecnología y resolución de problemas. Los asistentes aprenderán fundamentos de electrónica y programación aplicada.",
+        "fecha": "Jueves 24 de Octubre. 14:30 hrs.",
+        "lugar": "Duoc Sede Maipú.",
+        "imagen": "assets/User.jpg",
+        "comentario": [
+          {
+            "usuario": "Manuel Lorca",
+            "comentario": "Alguien de informática que vaya?? para no ir solo :("
+          },
+          {
+            "usuario": "Nicolas",
+            "comentario": "Deberían hacer talleres de Impresión 3D!"
+          }
+        ]
+      }
+    ],
+    "registro-eventos": [
+      {
+        "id": "839f",
+        "usuarioId": "20553366-4",
+        "eventoId": "2",
+        "titulo": "¿Qué es el cambio climático?",
+        "fecha": "Viernes 5 de Enero. 12:00 hrs.",
+        "usuarioNombre": "Jorge",
+        "usuarioEmail": "j.lorca@duocuc.cl",
+        "imagen": "assets/CambioClimatico.jpg",
+        "comentario": [
+          {
+            "usuario": "Manuel Lorca",
+            "comentario": "Alguien de informática que vaya?? para no ir solo :("
+          },
+          {
+            "usuario": "Nicolas",
+            "comentario": "Deberían hacer talleres de Impresión 3D!"
+          }
+        ]
+      },
+      {
+        "id": "b709",
+        "usuarioId": "20553366-4",
+        "eventoId": "3",
+        "titulo": "SII: Obligaciones Tributarias",
+        "fecha": "Lunes 13 de Junio. 15:00 hrs.",
+        "usuarioNombre": "Jorge",
+        "usuarioEmail": "j.lorca@duocuc.cl",
+        "imagen": "assets/FormalizacionSII.png",
+        "comentario": []
+      },
+      {
+        "id": "086d",
+        "usuarioId": "20553366-4",
+        "eventoId": "7627",
+        "titulo": "Taller de Robótica",
+        "fecha": "Jueves 24 de Octubre. 14:30 hrs.",
+        "usuarioNombre": "Jorge",
+        "usuarioEmail": "j.lorca@duocuc.cl",
+        "imagen": "assets/User.jpg",
+        "comentario": []
+      },
+      {
+        "id": "88e0",
+        "usuarioId": "12345678-k",
+        "eventoId": "2",
+        "titulo": "¿Qué es el cambio climático?",
+        "fecha": "Viernes 5 de Enero. 12:00 hrs.",
+        "usuarioNombre": "Juan",
+        "usuarioEmail": "b@b.com",
+        "imagen": "assets/CambioClimatico.jpg",
+        "comentario": []
+      }
+    ]
+  }
