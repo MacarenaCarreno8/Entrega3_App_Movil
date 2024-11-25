@@ -1,0 +1,36 @@
+.card-container {
+    display: flex; /* Activa Flexbox */
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten a múltiples filas si es necesario */
+    gap: 16px; /* Espacio entre las tarjetas */
+  }
+  
+  ion-card {
+    flex: 0 1 100%; /* Por defecto, ocupa el 100% del ancho de la pantalla */
+    max-width: 100%; /* Ancho máximo del 100% */
+  
+    @media (min-width: 768px) { /* Media query para pantallas medianas y superiores */
+      flex: 0 1 calc(50% - 16px); /* Ocupa el 50% del ancho menos el espacio del gap */
+      max-width: calc(50% - 16px); /* Ancho máximo del 50% menos el espacio del gap */
+    }
+  }
+
+
+
+.tituloprincipal{
+    text-align: center;
+    font-size: 20pt;
+    font-weight: bold;
+    font-family: 'Times New Roman';
+}
+
+
+ion-card{
+  margin-top: 10%;
+}
+
+ion-card-title{
+  text-align: center;
+  font-size: 20pt;
+  font-weight: bold;
+}
+

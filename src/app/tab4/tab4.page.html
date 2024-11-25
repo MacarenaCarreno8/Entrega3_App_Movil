@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="end" name="menu-outline" size="large" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title class="tituloprincipal">Código reserva usuarios</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">tab4</ion-title>
+
+      
+    </ion-toolbar>
+  </ion-header>
+  <br>
+  <ion-title class="mensaje">Scanear el QR de cada usuario.</ion-title>
+  <br>
+  
+  <ion-button  expand="block" fill="clear" shape="round">
+    <ion-img style="width: 50pt; height: 50pt;" src="assets/image/cam.png"></ion-img>
+  </ion-button>
+  <br>
+  <br>
+
+  
+  <div style="width: 200pt; height: 200pt; margin-left: 50px; padding-bottom: 30px;">
+  <ion-img  src="assets/image/qr.jpg"></ion-img>
+  </div>
+  <br>
+
+  
+</ion-content>
