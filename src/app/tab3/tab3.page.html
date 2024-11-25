@@ -1,17 +1,136 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 3
+  
+
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="end" name="menu-outline" size="large" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title class="tituloprincipal">
+      Eventos
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+<!--1ER EVENTO-->
+<ion-content [fullscreen]="true">
+<br>
+  <ion-button [routerLink]="['/creando']" style="padding-left: 100px;" color="success" fill="solid" size="small">
+    CREAR UN EVENTO
+  </ion-button>
+
+  <ion-card class="card">
+    <img src="/assets/image/PythonMachineLearning.jpg" />
+    <ion-card-header>
+      <ion-card-title>Charla: Python y Machine Learning</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Ven y conoce acerca del Machine Learning a través de la tecnología Python.
+      <strong> Lunes 13 de Junio. 15:00 hrs. Duoc Sede Maipú</strong>
+    </ion-card-content>
+    <div style="text-align: right; padding-right: 15px; padding-bottom: 15px;">
+      <ion-button fill="solid" color="danger" style="padding-right: 50px;" size="small">Eliminar</ion-button>
+      <ion-button fill="solid" color="warning"  style="margin-left: 15px;" size="small" [routerLink]="['/editando']">Editar</ion-button>
+    </div>
+  </ion-card>
+
+
+  <!--2DO EVENTO-->
+  <ion-card class="card">
+    <img src="/assets/image/CambioClimatico.jpg" />
+    <ion-card-header>
+      <ion-card-title>¿Qué es el cambio climático?</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      ¿Comó afecta a los seres vivos?. <strong> Viernes 5 de Enero. 12:00 hrs. Transmisión en vivo por Youtube</strong>
+    </ion-card-content>
+
+    <div style="text-align: right; padding-right: 15px; padding-bottom: 15px;">
+      <ion-button fill="solid" color="danger" style="padding-right: 50px; " size="small">Eliminar</ion-button>
+      <ion-button fill="solid" color="warning"  style="margin-left: 15px;" size="small" [routerLink]="['/editando']">Editar</ion-button>
+    </div>
+  </ion-card>
+
+  <!--3ER EVENTO-->
+  <ion-card class="card">
+    <img src="/assets/image/FormalizacionSII.jpg" />
+    <ion-card-header>
+      <ion-card-title>SII: Obligaciones Tributarias</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Durante esta actividad, podrás resolver tus dudas, respecto a los puntos que se estarán abordando en vivo.<strong> Lunes 13 de Junio. 15:00 hrs. Transmisión en vivo por Youtube</strong>
+    </ion-card-content>
+
+    <div style="text-align: right; padding-right: 15px; padding-bottom: 15px;">
+      <ion-button fill="solid" color="danger" style="padding-right: 50px; " size="small">Eliminar</ion-button>
+      <ion-button fill="solid" color="warning"  style="margin-left: 15px;" size="small" [routerLink]="['/editando']">Editar</ion-button>
+    </div>
+  </ion-card>
+
+  <!--4ER EVENTO-->
+  <ion-card>
+    <img src="/assets/image/Mapuches.jpg" />
+    <ion-card-header>
+      <ion-card-title>Mapuches: Historia y Cultura</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      En un país que cada día es más consciente de sus pueblos originarios, Duoc UC, sede Alameda ha realizado un  ciclo de concientización Mapuche, con dos capítulos uno enfocado en la cultura y otro en la historia.
+      <strong> Martes 12 de Octubre. 19:00 hrs. Transmisión en vivo por Youtube y Duoc Sede Alameda</strong>
+    </ion-card-content>
+
+    <div style="text-align: right; padding-right: 15px; padding-bottom: 15px;">
+      <ion-button fill="solid" color="danger" style="padding-right: 50px; " size="small">Eliminar</ion-button>
+      <ion-button fill="solid" color="warning"  style="margin-left: 15px;" size="small" [routerLink]="['/editando']">Editar</ion-button>
+    </div>
+  </ion-card>
+
+
+
+  <!--5to EVENTO-->
+  <ion-card>
+    <img src="/assets/image/competencias.JPG" />
+    <ion-card-header>
+      <ion-card-title>1er Seminario de Competencias Ágiles.</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      El propósito de esta jornada es compartir experiencias sobre el desarrollo de productos digitales y los desafíos asociados, con un enfoque ágil, colaborativo y centrado en el usuario final.
+      <strong> Viernes 23 de agosto, en el auditorio de Duoc UC Sede Maipú.</strong>
+    </ion-card-content>
+
+    <div style="text-align: right; padding-right: 15px; padding-bottom: 15px;">
+      <ion-button fill="solid" color="danger" style="padding-right: 50px; " size="small">Eliminar</ion-button>
+      <ion-button fill="solid" color="warning"  style="margin-left: 15px;" size="small" [routerLink]="['/editando']">Editar</ion-button>
+    </div>
+  </ion-card>
+
+
+
+
+  <!--6to EVENTO-->
+  <ion-card>
+    <img src="/assets/image/saludmental.jpg" />
+    <ion-card-header>
+      <ion-card-title>Seminario “Bienestar y Salud Mental”</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Hablaremos sobre la salud mental de los estudiantes de educación superior, las estrategias para potenciar el bienestar y de los apoyos que como institución hemos dispuesto para nuestra comunidad estudiantil.
+      <strong> Jueves 17 de Octubre, en el auditorio de Duoc UC Sede Maipú.  </strong>
+    </ion-card-content>
+
+    <div style="text-align: right; padding-right: 15px; padding-bottom: 15px;">
+      <ion-button fill="solid" color="danger" style="padding-right: 50px; " size="small">Eliminar</ion-button>
+      <ion-button fill="solid" color="warning"  style="margin-left: 15px;" size="small" [routerLink]="['/editando']">Editar</ion-button>
+    </div>
+  </ion-card>
+
+
+
 </ion-content>

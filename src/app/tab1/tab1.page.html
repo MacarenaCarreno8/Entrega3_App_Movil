@@ -1,7 +1,14 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
+  <ion-toolbar >
+    
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="end" name="menu-outline" size="large" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title class="tituloprincipal">
+      Login
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -14,4 +21,70 @@
   </ion-header>
 
   <app-explore-container name="Tab 1 page"></app-explore-container>
+
+
+
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title> Login </ion-card-title>
+      </ion-card-header>
+      
+    <ion-card-content>
+          
+      <ion-item>
+        <ion-label position="stacked">Correo Electrónico</ion-label>
+        <ion-input type="email" placeholder="Ingrese su correo" name="correo"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Password</ion-label>
+        <ion-input type="password" placeholder="Ingrese su password" name="password"></ion-input>
+      </ion-item>
+
+    </ion-card-content>
+
+    <div style="text-align: center;">
+      <ion-button (click)="login()" fill="solid" shape="round" color="warning">
+        Login
+      </ion-button>
+      <br>
+      <br>
+
+    <ion-button fill="clear" shape="round" color="secondary" [routerLink]="['/tabs/tab2']">
+      ¿No tienes cuenta? Regístrate aquí.
+    </ion-button>
+
+    </div>
+
+  </ion-card>
 </ion-content>
+<br>
+<br>
+<br>
+
+
+
+<!--FOOTER-->
+<ion-footer>
+  <ion-toolbar>
+    <ion-title style="font-size: small; margin-left: -10px;">Eventos DuocUc Sede Maipú 2024</ion-title>
+    <ion-buttons slot="end">
+
+      <ion-button fill="clear">
+        <ion-icon name="logo-instagram"></ion-icon>
+      </ion-button>
+
+      <ion-button fill="clear">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </ion-button>
+
+      <ion-button fill="clear">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </ion-button>
+
+
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
+

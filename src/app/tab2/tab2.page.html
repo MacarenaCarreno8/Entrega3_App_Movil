@@ -1,7 +1,14 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 2
+
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="end" name="menu-outline" size="large" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title class="tituloprincipal">
+      Registro de usuario
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -14,4 +21,76 @@
   </ion-header>
 
   <app-explore-container name="Tab 2 page"></app-explore-container>
+
+
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-title> Regístrate </ion-card-title>
+  </ion-card-header>
+  
+<ion-card-content>
+      
+  <ion-item>
+    <ion-label position="stacked">Nombre</ion-label>
+    <ion-input type="text" placeholder="Ingrese su nombre"></ion-input>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label position="stacked">Apellido</ion-label>
+    <ion-input type="text" placeholder="Ingrese su apellido"></ion-input>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label position="stacked">Correo Electrónico</ion-label>
+    <ion-input type="email" placeholder="Ingrese su correo" name="correo"></ion-input>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label position="stacked">Password</ion-label>
+    <ion-input type="password" placeholder="Ingrese su password" name="password"></ion-input>
+  </ion-item>
+
+</ion-card-content>
+
+
+<div style="text-align: center;">
+  <ion-button (click)="Registrado()" fill="solid" shape="round" color="tertiary" [routerLink]="['/index']">
+    Confirmar
+  </ion-button>
+  <br>
+
+</div>
+
+</ion-card>
 </ion-content>
+<br>
+
+
+
+
+<!--FOOTER-->
+<ion-footer>
+<ion-toolbar>
+<ion-title style="font-size: small; margin-left: -10px;">Eventos DuocUc Sede Maipú 2024</ion-title>
+<ion-buttons slot="end">
+
+  <ion-button fill="clear">
+    <ion-icon name="logo-instagram"></ion-icon>
+  </ion-button>
+
+  <ion-button fill="clear">
+    <ion-icon name="logo-facebook"></ion-icon>
+  </ion-button>
+
+  <ion-button fill="clear">
+    <ion-icon name="logo-twitter"></ion-icon>
+  </ion-button>
+
+
+</ion-buttons>
+</ion-toolbar>
+</ion-footer>
