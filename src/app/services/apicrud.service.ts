@@ -24,8 +24,8 @@ export class ApicrudService {
     return this.httpclient.get<Eventos[]>(`${environment.apiUrl}/eventos`);
   }
 
-  getEventoById(idEvento: string): Observable<Eventos> {
-    return this.httpclient.get<Eventos>(`${environment.apiUrl}/eventos/${idEvento}`);
+  getEventoById(idEvento: number): Observable<Eventos> {
+    return this.httpclient.get<Eventos>(`${environment.apiUrl}/eventos/?idEvento=${idEvento}`);
   }
 
   // Agregar nuevo evento al servidor
@@ -35,8 +35,11 @@ export class ApicrudService {
 
   // Actualizar evento en el servidor
   putEventos(eventito: any): Observable<Eventos> {
+    if (!eventito.id) {
+      throw new Error('El evento no tiene ID');
+    }
     return this.httpclient.put<Eventos>(`${environment.apiUrl}/eventos/${eventito.id}`, eventito);
-  }
+  }  
 
   // Eliminar evento del servidor
   deleteEventos(evento: any): Observable<Eventos> {
