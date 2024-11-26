@@ -29,33 +29,53 @@
     <ion-card-title> Creando un evento </ion-card-title>
   </ion-card-header>
 
-  <ion-card-content>
-    
+  <ion-card-content  >
+    <form (ngSubmit)="crearEvento()">
     <ion-item>
       <ion-label position="stacked">Ingrese el título de su evento: </ion-label>
-      <ion-input type="text" placeholder="Ingrese el tema del evento:... "></ion-input>
+      <ion-input type="text" [(ngModel)]="nuevoEvento.titulo"  placeholder="Ingrese el tema del evento:... "  name="titulo" required></ion-input>
     </ion-item>
 
 
     <ion-item>
       <ion-label position="stacked">Ingrese la descripción de su evento: </ion-label>
-      <ion-input type="text" placeholder="Ingrese descripción:... "></ion-input>
+      <ion-textarea [(ngModel)]="nuevoEvento.descripcion" placeholder="Ingrese la descripción:... " name="descripcion" required></ion-textarea>
     </ion-item>
 
     <ion-item>
       <ion-label position="stacked">Ingrese la fecha de su evento: </ion-label>
-      <ion-input type="text" placeholder="Ingrese la fecha de su evento:... "></ion-input>
+      <ion-input type="text" [(ngModel)]="nuevoEvento.fecha"  placeholder="Ingrese la fecha:... "  name="fecha" required></ion-input>
     </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Ingrese el lugar: </ion-label>
+      <ion-textarea [(ngModel)]="nuevoEvento.lugar" placeholder="Ingrese el lugar:... " name="lugar" required></ion-textarea>
+    </ion-item>
+
+
+    <!-- Campo para subir imagen -->
+    <ion-item>
+      <ion-label>Seleccionar imagen</ion-label>
+      <input type="file" (change)="onSelectImage($event)" accept="image/*">
+    </ion-item>
+
+  <br>
+      <!-- Mostrar la vista previa de la imagen seleccionada -->
+      <div *ngIf="imagenPreview" class="image-preview-container" >
+        <img [src]="imagenPreview" alt="Vista previa de la imagen"  class="image-preview" >
+      </div>
+    
+
+    </form>
   </ion-card-content>
 
-  <ion-button style="margin-left: 120px;" (click)="creado()" [routerLink]="['/tabs/tab3']" fill="solid" size="small" >
-    CREAR
-  </ion-button>
-  <br>
 
 </ion-card>
 
-
+<ion-button (click)="crearEvento()" fill="solid" size="small">
+  CREAR
+</ion-button>
+<br>
 
 
 

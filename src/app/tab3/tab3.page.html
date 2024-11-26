@@ -7,9 +7,18 @@
 
 
 <ion-content [fullscreen]="true">
+
+  <div style="text-align: center; padding-bottom: 15px;" >
+    <ion-button (click)="CrearEvento()" fill="solid">
+      Crear evento
+    </ion-button>
+  </div>
+
+
+
   <!--Modificar color de botones hacer "scroll infinito"-->
   <ion-card>
-    
+
     <ion-card-header>
       <ion-card-title>Eventos destacados</ion-card-title>
     </ion-card-header>
@@ -30,6 +39,8 @@
 
 <ion-card class="eventos" *ngFor="let e of eventos">
   
+
+
   <ion-card-header>
     <ion-card-title>{{e.titulo}}</ion-card-title>
   </ion-card-header>
@@ -45,12 +56,14 @@
 
   </ion-card-content>
 
-  <div style="text-align: right; padding-right: 15px; padding-bottom: 15px;">
-    <ion-button fill="solid">
-      Crear evento
+  <div style="text-align: center; padding-bottom: 15px;" >
+    <ion-button (click)="actualizarEvento(e)" fill="solid">
+      Modificar
     </ion-button>
   </div>
 
 </ion-card>
+
+
 
 </ion-content>

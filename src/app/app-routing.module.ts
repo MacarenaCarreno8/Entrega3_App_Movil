@@ -29,7 +29,7 @@ const routes: Routes = [
     canActivate:[AutorizadoGuard]
   },
   {
-    path: 'editando',
+    path: 'editando/:id',
     loadChildren: () => import('./editando/editando.module').then( m => m.EditandoPageModule),
     canActivate:[AutorizadoGuard]
   },

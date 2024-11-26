@@ -1,50 +1,81 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title class="tituloprincipal">EDITANDO EVENTO</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="end" name="menu-outline" size="large" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title  class="tituloprincipal" >EDITANDO EVENTO</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
+    <ion-toolbar>
 
+    
+
+      <ion-title size="large">EDITANDO</ion-title>
+    </ion-toolbar>
   </ion-header>
 </ion-content>
 
 
 <ion-card>
+  
   <ion-card-header>
-    <ion-card-title> Editando un evento </ion-card-title>
+    <ion-card-title> EDITANDO EVENTO </ion-card-title>
   </ion-card-header>
 
-  <ion-card-content>
+  <ion-card-content  >
+    <form (ngSubmit)="updateEvento()">
+    <ion-item lines="full">
+      <ion-label position="stacked">Ingrese el título de su evento: </ion-label>
+      <ion-input type="text" [(ngModel)]="eventito.titulo"  placeholder="Ingrese el tema del evento:... "  name="titulo" required></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label position="stacked">Ingrese la descripción de su evento: </ion-label>
+      <ion-textarea [(ngModel)]="eventito.descripcion" placeholder="Ingrese la descripción:... " name="descripcion" required></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Ingrese la fecha de su evento: </ion-label>
+      <ion-input type="text" [(ngModel)]="eventito.fecha"  placeholder="Ingrese la fecha:... "  name="fecha" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Ingrese el lugar: </ion-label>
+      <ion-textarea [(ngModel)]="eventito.lugar" placeholder="Ingrese el lugar:... " name="lugar" required></ion-textarea>
+    </ion-item>
+
+
+    <!-- Campo para subir imagen -->
+    <ion-item>
+      <ion-label>Seleccionar imagen</ion-label>
+      <input type="file" (change)="onSelectImage($event)" accept="image/*">
+    </ion-item>
+
+  <br>
+      <!-- Mostrar la vista previa de la imagen seleccionada -->
+      <div *ngIf="imagenPreview" class="image-preview-container" >
+        <img [src]="imagenPreview" alt="Vista previa de la imagen"  class="image-preview" >
+      </div>
     
-    <ion-item>
-      <ion-label position="stacked">Re-ingrese el título de su evento: </ion-label>
-      <ion-input type="text" placeholder="..."></ion-input>
-    </ion-item>
 
-
-    <ion-item>
-      <ion-label position="stacked">Re-ingrese la descripción de su evento: </ion-label>
-      <ion-input type="text" placeholder="..."></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="stacked">Re-ingrese la fecha de su evento: </ion-label>
-      <ion-input type="text" placeholder="..."></ion-input>
-    </ion-item>
+    </form>
   </ion-card-content>
 
-  <ion-button style="margin-left: 120px;" (click)="editar()"  fill="solid" size="small" >
-    CONFIRMAR
-  </ion-button>
-  <br>
-  <br>
-  
+
 </ion-card>
 
-
-
+<ion-button (click)="updateEvento()" fill="solid" size="small">
+  ACTUALIZAR
+</ion-button>
+<br>
 
 
 

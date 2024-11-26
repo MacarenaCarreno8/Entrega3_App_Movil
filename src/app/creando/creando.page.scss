@@ -15,5 +15,29 @@ ion-card-title{
     font-weight: bold;
 }
 
+ion-item {
+    margin-bottom: 10px; /* Ajusta el espacio entre los items */
+  }
+  
 
 
+
+  .image-preview-container {
+    width: 100%;  /* Asegura que el contenedor ocupe todo el ancho disponible */
+    max-width: 100%;  /* Evita que se salga del contenedor */
+    height: auto;  /* Ajusta la altura según la imagen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    overflow: hidden;  /* Oculta cualquier parte de la imagen que sobresalga */
+  }
+  
+  .image-preview {
+    width: 100%;  /* La imagen ocupará todo el espacio disponible */
+    height: auto;  /* Mantiene la proporción de la imagen */
+    object-fit: contain;  /* La imagen se ajusta sin ser recortada */
+    max-height: 300px;  /* Establece una altura máxima si lo deseas */
+    object-position: center;  /* Centra la imagen si hay espacio adicional */
+    border-radius: 8px;  /* Opcional, redondea las esquinas de la imagen */
+  }
