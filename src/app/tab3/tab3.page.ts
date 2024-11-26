@@ -23,6 +23,8 @@ export class Tab3Page  {
 
 
   eventos: Eventos[]=[];
+
+  eventoid: any;
   
 
   constructor(private menucontroller: MenuController,
@@ -33,6 +35,7 @@ export class Tab3Page  {
 mostrarMenu(){
   this.menucontroller.open('first');
 }
+
 
 
 ngOnInit() {
@@ -46,5 +49,17 @@ ionViewWillEnter(){
     console.log(this.eventos)
   })
 }
+
+CrearEvento(){
+  this.router.navigate(['/creando']);
+}
+
+
+actualizarEvento(evento:any){
+   console.log('Evento a modificar:', evento); // Verifica que esté recibiendo el evento correcto
+    this.router.navigate(['/editando', evento.id],
+    {queryParams: {evento:JSON.stringify(evento)}}
+    )
+  }
 
 }
