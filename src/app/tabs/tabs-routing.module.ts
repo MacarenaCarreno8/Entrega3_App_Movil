@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
+import { RegresarGuard } from '../guards/regresar.guard';
+import { AutorizadoGuard } from '../guards/autorizado.guard';
 
 const routes: Routes = [
   {
@@ -9,20 +11,24 @@ const routes: Routes = [
     children: [
       {
         path: 'tab1',
-        loadChildren: () => import('../tab1/tab1.module').then(m => m.Tab1PageModule)
+        loadChildren: () => import('../tab1/tab1.module').then(m => m.Tab1PageModule),
+        canActivate:[RegresarGuard]
       },
       {
         path: 'tab2',
-        loadChildren: () => import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+        loadChildren: () => import('../tab2/tab2.module').then(m => m.Tab2PageModule),
+        canActivate:[RegresarGuard]
       },
       {
         path: 'tab3',
-        loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+        loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule),
+        canActivate:[AutorizadoGuard]
       },
 
       {
         path: 'tab4',
-        loadChildren: () => import('../tab4/tab4.module').then( m => m.Tab4PageModule)
+        loadChildren: () => import('../tab4/tab4.module').then( m => m.Tab4PageModule),
+        canActivate:[AutorizadoGuard]
       },
       {
         path: '',
