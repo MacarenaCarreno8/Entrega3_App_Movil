@@ -30,38 +30,103 @@
   </ion-card-header>
   
 <ion-card-content>
-      
-  <ion-item>
-    <ion-label position="stacked">Nombre</ion-label>
-    <ion-input type="text" placeholder="Ingrese su nombre"></ion-input>
-  </ion-item>
+
+  <form [formGroup]="registroForm">
+    <ion-item>
+      <ion-label position="stacked">Nombre</ion-label>
+      <ion-input type="text" placeholder="Ingrese su nombre" formControlName="nombre"></ion-input>
+    </ion-item>
+
+    <div id="alerta" *ngIf="registroForm.get('nombre')?.invalid && (registroForm.get('nombre')?.dirty || registroForm.get('nombre')?.touched)">
+      <div id="alerta" *ngIf="registroForm.get('nombre')?.hasError('required')">
+        * El nombre es obligatorio
+      </div>
+      <div id="alerta" *ngIf="registroForm.get('nombre')?.hasError('minlength')">
+        * Debe ingresar 3 carácteres mínimo
+      </div>
+    </div>
+
+    <ion-item>
+      <ion-label position="stacked">Apellido</ion-label>
+      <ion-input type="text" placeholder="Ingrese su apellido" formControlName="apellido"></ion-input>
+    </ion-item>
+
+    <div id="alerta" *ngIf="registroForm.get('apellido')?.invalid && (registroForm.get('apellido')?.dirty || registroForm.get('apellido')?.touched)">
+      <div id="alerta" *ngIf="registroForm.get('apellido')?.hasError('required')">
+        * El apellido es obligatorio
+      </div>
+      <div id="alerta" *ngIf="registroForm.get('apellido')?.hasError('minlength')">
+        * Debe ingresar 3 carácteres mínimo
+      </div>
+    </div>
+
+    <ion-item>
+      <ion-label position="stacked">Rut</ion-label>
+      <ion-input type="text" placeholder="Ingrese su rut" formControlName="run"></ion-input>
+    </ion-item>
+
+    <div id="alerta" *ngIf="registroForm.get('run')?.invalid && (registroForm.get('run')?.dirty || registroForm.get('run')?.touched)">
+      <div id="alerta" *ngIf="registroForm.get('run')?.hasError('required')">
+        * El run es obligatorio
+      </div>
+      <div id="alerta" *ngIf="registroForm.get('run')?.hasError('pattern')">
+        * Debe ingresar el rut en formato 11222333-4
+      </div>
+    </div>
+
+    <ion-item>
+      <ion-label position="stacked">Fono</ion-label>
+      <ion-input type="text" placeholder="Ingrese su fono" formControlName="fono"></ion-input>
+    </ion-item>
+
+    <div id="alerta" *ngIf="registroForm.get('fono')?.invalid && (registroForm.get('fono')?.dirty || registroForm.get('fono')?.touched)">
+      <div id="alerta" *ngIf="registroForm.get('fono')?.hasError('required')">
+        * El fono es obligatorio
+      </div>
+      <div id="alerta" *ngIf="registroForm.get('fono')?.hasError('pattern')">
+        * Debe ingresar el fono en formato +56911223344
+      </div>
+    </div>
 
 
-  <ion-item>
-    <ion-label position="stacked">Apellido</ion-label>
-    <ion-input type="text" placeholder="Ingrese su apellido"></ion-input>
-  </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Correo Electrónico</ion-label>
+      <ion-input type="email" placeholder="Ingrese su correo" formControlName="correo"></ion-input>
+    </ion-item>
+
+    <div id="alerta" *ngIf="registroForm.get('correo')?.invalid && (registroForm.get('correo')?.dirty || registroForm.get('correo')?.touched)">
+      <div id="alerta" *ngIf="registroForm.get('correo')?.hasError('required')">
+        * El correo es obligatorio
+      </div>
+      <div id="alerta" *ngIf="registroForm.get('correo')?.hasError('email')">
+        * Debe ingresar un correo válido
+      </div>
+    </div>
 
 
-  <ion-item>
-    <ion-label position="stacked">Correo Electrónico</ion-label>
-    <ion-input type="email" placeholder="Ingrese su correo" name="correo"></ion-input>
-  </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Password</ion-label>
+      <ion-input type="password" placeholder="Ingrese su password" formControlName="password"></ion-input>
+    </ion-item>
 
-
-  <ion-item>
-    <ion-label position="stacked">Password</ion-label>
-    <ion-input type="password" placeholder="Ingrese su password" name="password"></ion-input>
-  </ion-item>
+    <div id="alerta" *ngIf="registroForm.get('password')?.invalid && (registroForm.get('password')?.dirty || registroForm.get('password')?.touched)">
+      <div id="alerta" *ngIf="registroForm.get('password')?.hasError('required')">
+        * La contraseña es obligatoria
+      </div>
+      <div id="alerta" *ngIf="registroForm.get('password')?.hasError('pattern')">
+        * La contraseña debe tener 8 caracteres mínimo, al menos una letra y al menos un número
+      </div>
+    </div>
+    
+  </form>
 
 </ion-card-content>
 
 
-<div style="text-align: center;">
-  <ion-button (click)="Registrado()" fill="solid" shape="round" color="tertiary" [routerLink]="['/index']">
+<div style="text-align: center;margin-bottom: 25px;">
+  <ion-button (click)="registro()" fill="solid" shape="round" color="tertiary" [routerLink]="['/tabs/tab1']">
     Confirmar
   </ion-button>
-  <br>
 
 </div>
 

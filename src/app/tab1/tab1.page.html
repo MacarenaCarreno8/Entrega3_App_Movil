@@ -31,17 +31,35 @@
       </ion-card-header>
       
     <ion-card-content>
-          
-      <ion-item>
-        <ion-label position="stacked">Correo Electrónico</ion-label>
-        <ion-input type="email" placeholder="Ingrese su correo" name="correo"></ion-input>
-      </ion-item>
+      <form [formGroup]="loginForm">
+        <ion-item>
+          <ion-label position="stacked">Correo Electrónico</ion-label>
+          <ion-input type="email" placeholder="Ingrese su correo" formControlName="correo"></ion-input>
+        </ion-item>
 
-      <ion-item>
-        <ion-label position="stacked">Password</ion-label>
-        <ion-input type="password" placeholder="Ingrese su password" name="password"></ion-input>
-      </ion-item>
+        <div id="alerta" *ngIf="loginForm.get('correo')?.invalid && (loginForm.get('correo')?.dirty || loginForm.get('correo')?.touched)">
+          <div id="alerta" *ngIf="loginForm.get('correo')?.hasError('required')">
+            * El correo es obligatorio
+          </div>
+          <div id="alerta" *ngIf="loginForm.get('correo')?.hasError('email')">
+            * Debe ingresar un correo válido
+          </div>
+        </div>
 
+        <ion-item>
+          <ion-label position="stacked">Password</ion-label>
+          <ion-input type="password" placeholder="Ingrese su password" formControlName="password"></ion-input>
+        </ion-item>
+
+        <div id="alerta" *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)">
+          <div id="alerta" *ngIf="loginForm.get('password')?.hasError('required')">
+            * La contraseña es obligatoria
+          </div>
+          <div id="alerta" *ngIf="loginForm.get('password')?.hasError('minlength')">
+            * Debe ingresar 8 carácteres mínimo
+          </div>
+        </div>
+      </form>
     </ion-card-content>
 
     <div style="text-align: center;">

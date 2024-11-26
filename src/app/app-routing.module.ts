@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AutorizadoGuard } from './guards/autorizado.guard';
 
 const routes: Routes = [
   {
@@ -14,19 +15,23 @@ const routes: Routes = [
   },
   {
     path: 'index',
-    loadChildren: () => import('./index/index.module').then( m => m.IndexPageModule)
+    loadChildren: () => import('./index/index.module').then( m => m.IndexPageModule),
+    canActivate:[AutorizadoGuard]
   },
   {
     path: 'restablecer',
-    loadChildren: () => import('./restablecer/restablecer.module').then( m => m.RestablecerPageModule)
+    loadChildren: () => import('./restablecer/restablecer.module').then( m => m.RestablecerPageModule),
+    canActivate:[AutorizadoGuard]
   },
   {
     path: 'creando',
-    loadChildren: () => import('./creando/creando.module').then( m => m.CreandoPageModule)
+    loadChildren: () => import('./creando/creando.module').then( m => m.CreandoPageModule),
+    canActivate:[AutorizadoGuard]
   },
   {
     path: 'editando',
-    loadChildren: () => import('./editando/editando.module').then( m => m.EditandoPageModule)
+    loadChildren: () => import('./editando/editando.module').then( m => m.EditandoPageModule),
+    canActivate:[AutorizadoGuard]
   },
   
   
