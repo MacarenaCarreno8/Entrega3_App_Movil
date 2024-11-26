@@ -30,9 +30,11 @@
     "@ionic/angular": "^8.0.0",
     "@zxing/library": "^0.21.3",
     "ionicons": "^7.0.0",
+    "rollup": "^4.27.4",
     "rxjs": "~7.8.0",
     "swiper": "^11.1.15",
     "tslib": "^2.3.0",
+    "vite": "^6.0.0",
     "zone.js": "~0.14.2"
   },
   "devDependencies": {
