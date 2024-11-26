@@ -21,20 +21,25 @@
     </ion-toolbar>
   </ion-header>
   <br>
-  <ion-title class="mensaje">Scanear el QR de cada usuario.</ion-title>
+  <ion-title class="mensaje">Escanear el QR de cada usuario.</ion-title>
   <br>
   
-  <ion-button  expand="block" fill="clear" shape="round">
-    <ion-img style="width: 50pt; height: 50pt;" src="assets/image/cam.png"></ion-img>
+  <ion-button (click)="scanQr()"  expand="block" fill="clear" shape="round">
+    <ion-img style="width: 50pt; height: 50pt;" src="assets/cam.png"></ion-img>
   </ion-button>
   <br>
   <br>
 
   
-  <div style="width: 200pt; height: 200pt; margin-left: 50px; padding-bottom: 30px;">
-  <ion-img  src="assets/image/qr.jpg"></ion-img>
+  <div *ngIf="aux">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Datos del QR</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p *ngFor="let d of scannedData">{{d}}</p>
+      </ion-card-content>
+    </ion-card>
   </div>
-  <br>
-
   
 </ion-content>
