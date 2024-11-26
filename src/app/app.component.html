@@ -10,13 +10,11 @@
     <ion-content>
       <ion-list>
         <ion-menu-toggle *ngFor="let m of menu">
-          <ion-item [routerLink]="m.redirectTo" detail="true">
+          <ion-item (click)="m.action ? m.action() : null" [routerLink]="!m.action ? m.redirectTo : null" detail="true">
             <ion-icon color="dark" slot="start" [name]="m.icon"></ion-icon>
             <ion-label>{{m.name}}</ion-label>
           </ion-item>
-
-        </ion-menu-toggle> 
-          
+        </ion-menu-toggle>
       </ion-list>
     </ion-content>
 

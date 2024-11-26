@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 interface Menu{
   icon: string;
   name: string;
   redirectTo: string;
+  action?: () => void;
 }
 
 @Component({
@@ -21,6 +23,12 @@ export class AppComponent {
     },
 
     {
+      icon: "person-outline",
+      name: "Mi Perfil",
+      redirectTo: '/perfil' 
+    },
+
+    {
       icon: "today-outline",
       name: "Eventos",
       redirectTo: '/tabs/tab3' 
@@ -35,10 +43,16 @@ export class AppComponent {
     {
       icon: "log-out-outline",
       name: "Cerrar sesión",
-      redirectTo: '/tabs/tab1' 
+      redirectTo: '',
+      action: () => this.cerrarSesion() 
     },
 
   ]
 
-  constructor() {}
+  constructor(private router: Router) {}
+
+  cerrarSesion() {
+    sessionStorage.clear();
+    this.router.navigate(['/tabs/tab1']);
+  }
 }
