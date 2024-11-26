@@ -1,0 +1,123 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/perfil"></ion-back-button>
+    </ion-buttons>
+    <ion-title>modifuser</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <ion-card>
+      <ion-card-header style="text-align: center;">
+        <ion-card-title>Modificar datos de Usuario</ion-card-title>
+      </ion-card-header>
+  
+      <ion-card-content>
+        <form [formGroup]="modifUserForm">
+          <ion-item>
+            <ion-label position="stacked">Imagen</ion-label>
+            <ion-input type="file" (change)="onImageSelected($event)" accept="image/*" />
+          </ion-item>
+
+          <ion-item>
+            <ion-input label="Nombre" label-placement="floating" [(ngModel)]="userModificado.nombre" formControlName="nombre"></ion-input>
+          </ion-item>
+
+          <div id="alerta" *ngIf="modifUserForm.get('nombre')?.invalid && (modifUserForm.get('nombre')?.dirty || modifUserForm.get('email')?.touched)">
+            <div id="alerta" *ngIf="modifUserForm.get('nombre')?.hasError('required')">
+              * El nombre es obligatorio
+            </div>
+            <div id="alerta" *ngIf="modifUserForm.get('nombre')?.hasError('minlength')">
+              * Debe ingresar 3 caracteres mínimo
+            </div>
+          </div>
+    
+          <ion-item>
+            <ion-input label="Apellido" label-placement="floating" [(ngModel)]="userModificado.apellido" formControlName="apellido"></ion-input>
+          </ion-item>
+
+          <div id="alerta" *ngIf="modifUserForm.get('apellido')?.invalid && (modifUserForm.get('apellido')?.dirty || modifUserForm.get('apellido')?.touched)">
+            <div id="alerta" *ngIf="modifUserForm.get('apellido')?.hasError('required')">
+              * El apellido es obligatorio
+            </div>
+            <div id="alerta" *ngIf="modifUserForm.get('apellido')?.hasError('minlength')">
+              * Debe ingresar 3 caracteres mínimo
+            </div>
+          </div>
+    
+          <ion-item>
+            <ion-input label="Email" label-placement="floating" [(ngModel)]="userModificado.email" type="email" formControlName="email"></ion-input>
+          </ion-item>
+
+          <div id="alerta" *ngIf="modifUserForm.get('email')?.invalid && (modifUserForm.get('email')?.dirty || modifUserForm.get('email')?.touched)">
+            <div id="alerta" *ngIf="modifUserForm.get('email')?.hasError('required')">
+              * El email es obligatorio
+            </div>
+            <div id="alerta" *ngIf="modifUserForm.get('email')?.hasError('email')">
+              * Debe ingresar un correo válido
+            </div>
+          </div>
+
+          <ion-item>
+            <ion-input label="Número de telefono" label-placement="floating" [(ngModel)]="userModificado.fono" placeholder="En formato +569..." formControlName="fono"></ion-input>
+          </ion-item>
+
+          <div id="alerta" *ngIf="modifUserForm.get('fono')?.invalid && (modifUserForm.get('fono')?.dirty || modifUserForm.get('fono')?.touched)">
+            <div id="alerta" *ngIf="modifUserForm.get('fono')?.hasError('required')">
+              * El fono es obligatorio
+            </div>
+            <div id="alerta" *ngIf="modifUserForm.get('fono')?.hasError('pattern')">
+              * Debe ingresar el fono en formato +569...
+            </div>
+          </div>
+          
+          <div style="padding-top: 20px;padding-bottom: 10px; font-weight: bold; font-family: Verdana, Geneva, Tahoma, sans-serif;text-align: center;">
+            <ion-label style="font-weight: bold;font-family: Verdana, Geneva, Tahoma, sans-serif;padding-top: 50px;">Para modificar los datos, por favor ingrese su contraseña</ion-label>
+          </div>
+          
+
+          <ion-item>
+            <ion-input label="Contraseña" label-placement="floating" type="password" formControlName="password"></ion-input>
+          </ion-item>
+
+          <div id="alerta" *ngIf="modifUserForm.get('password')?.invalid && (modifUserForm.get('password')?.dirty || modifUserForm.get('password')?.touched)">
+            <div id="alerta" *ngIf="modifUserForm.get('password')?.hasError('required')">
+              * La contraseña es obligatoria
+            </div>
+          </div>
+
+          <div style="text-align: right;">
+            <ion-button (click)="modifUser()" fill="solid" shape="round" style="padding-bottom: 15px; padding-right: 15px;">
+              Modificar
+            </ion-button>
+          </div>
+        </form>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+
+<!--FOOTER-->
+<ion-footer>
+  <ion-toolbar>
+  <ion-title style="font-size: small; margin-left: -10px;">Eventos DuocUc Sede Maipú 2024</ion-title>
+  <ion-buttons slot="end">
+  
+    <ion-button fill="clear">
+      <ion-icon name="logo-instagram"></ion-icon>
+    </ion-button>
+  
+    <ion-button fill="clear">
+      <ion-icon name="logo-facebook"></ion-icon>
+    </ion-button>
+  
+    <ion-button fill="clear">
+      <ion-icon name="logo-twitter"></ion-icon>
+    </ion-button>
+  
+  
+  </ion-buttons>
+  </ion-toolbar>
+  </ion-footer>

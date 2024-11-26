@@ -133,14 +133,15 @@
     },
     {
       "id": "3",
-      "run": "1111111-1",
+      "run": "11111111-1",
       "password": "duoc1234",
       "nombre": "test",
       "apellido": "test",
       "fono": "+56911112222",
       "email": "b@b.cl",
       "isactive": true,
-      "imageUrl": "assets/User.jpg"
+      "imageUrl": "assets/User.jpg",
+      "eventosRegistrados": []
     },
     {
       "id": "987f",
