@@ -23,6 +23,12 @@ export class AppComponent {
     },
 
     {
+      icon: "person-outline",
+      name: "Mi Perfil",
+      redirectTo: '/perfil' 
+    },
+
+    {
       icon: "today-outline",
       name: "Eventos",
       redirectTo: '/tabs/tab3' 

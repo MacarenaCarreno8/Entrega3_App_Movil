@@ -1,0 +1,67 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="end" name="menu-outline" size="large" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      Mi Perfil
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div>
+    <ion-card>
+      <ion-card-header id="container-padre">
+        <div id="img-container" style="text-align: center;">
+          <img [src]="user.imageUrl" alt="User">
+        </div>
+        <ion-card-title style="text-align: center;">{{user.nombre}} {{user.apellido}}</ion-card-title>
+      </ion-card-header>
+  
+      <ion-card-content>
+        <ion-item>
+          <ion-input label="Rut:" [(ngModel)]="user.run" [readonly]="true"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input label="Email:" [(ngModel)]="user.email" [readonly]="true"></ion-input>
+        </ion-item>
+  
+        <ion-item>
+          <ion-input label="Fono:" [(ngModel)]="user.fono" [readonly]="true"></ion-input>
+        </ion-item>
+
+        <ion-button (click)="modifUser(this.user)" expand="block" fill="clear" shape="round">
+          Modificar Datos
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div><br><br>
+  
+</ion-content>
+
+<!--FOOTER-->
+<ion-footer>
+  <ion-toolbar>
+  <ion-title style="font-size: small; margin-left: -10px;">Eventos DuocUc Sede Maipú 2024</ion-title>
+  <ion-buttons slot="end">
+  
+    <ion-button fill="clear">
+      <ion-icon name="logo-instagram"></ion-icon>
+    </ion-button>
+  
+    <ion-button fill="clear">
+      <ion-icon name="logo-facebook"></ion-icon>
+    </ion-button>
+  
+    <ion-button fill="clear">
+      <ion-icon name="logo-twitter"></ion-icon>
+    </ion-button>
+  
+  
+  </ion-buttons>
+  </ion-toolbar>
+  </ion-footer>

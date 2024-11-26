@@ -33,6 +33,15 @@ const routes: Routes = [
     loadChildren: () => import('./editando/editando.module').then( m => m.EditandoPageModule),
     canActivate:[AutorizadoGuard]
   },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
+  {
+    path: 'modifuser/:id',
+    loadChildren: () => import('./modifuser/modifuser.module').then( m => m.ModifuserPageModule)
+  },
+
   
   
 ];
